@@ -35,6 +35,6 @@ Die Original-Checkliste liegt unverändert in `checkliste-original.txt`. Stand: 
 
 ## Bewusste gestalterische Entscheidungen
 
-- Leistungen bleiben auf der Startseite als geordnete Reihen statt austauschbarer Kacheln; Detailseiten sind vorhanden.
+- Startseite mit bildfüllendem Einstieg, drei Leistungsflächen, persönlichem Ansprechpartner und eigenständigem Anfragebereich; Detailseiten bleiben vorhanden.
 - Keine Preisbeispiele oder Notdienstwerbung ohne tatsächliches Angebot und Konditionen.
 - Animationen ergänzen die Lesbarkeit; Inhalte bleiben ohne JavaScript und bei reduzierter Bewegung zugänglich.
