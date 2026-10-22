@@ -12,7 +12,7 @@ Die Original-Checkliste liegt unverändert in `checkliste-original.txt`. Stand: 
 - Mailprogramm statt angeblichem Direktversand: Hinweis und Status erklären den tatsächlichen Ablauf.
 - Beschreibung der nächsten Schritte und benötigter Projektinformationen.
 - Sticky Header mit Scrollzustand, Hover-Markierung, aktuellem Abschnitt und animiertem mobilem Menü; Tastaturbedienung und Escape zum Schließen.
-- Dezente Animationen; reduzierte Bewegung wird berücksichtigt. Kein Autoplay-Video, keine Pop-ups.
+- Scrollbewegung im Titelbild, laufende Ortszeile und animierte Leistungszeichnungen. Globaler Pause-Button; reduzierte Bewegung wird berücksichtigt. Kein Autoplay-Video, keine Pop-ups.
 
 ## Inhalte und Entscheidungen vom Betrieb benötigt
 

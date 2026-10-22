@@ -16,7 +16,7 @@ function setupMotion() {
     element.classList.remove('reveal', 'is-visible');
     element.style.removeProperty('--reveal-delay');
   });
-  if (motionPreference.matches || !('IntersectionObserver' in window)) return;
+  if (motionPreference.matches || document.documentElement.classList.contains('motion-paused') || !('IntersectionObserver' in window)) return;
   revealObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
@@ -105,3 +105,77 @@ const sectionObserver = new IntersectionObserver(entries => {
   });
 }, { rootMargin: '-120px 0px -35% 0px', threshold: [0, 0.2, 0.5] });
 sections.forEach(section => sectionObserver.observe(section));
+
+
+// Ambient motion has one explicit pause control and follows device preferences.
+const motionToggle = document.querySelector('.motion-toggle');
+let manuallyPaused = false;
+function motionIsActive() {
+  return !motionPreference.matches && !manuallyPaused && !document.hidden;
+}
+function syncAmbientMotion() {
+  const active = !motionPreference.matches && !manuallyPaused;
+  document.documentElement.classList.toggle('motion-enabled', active);
+  document.documentElement.classList.toggle('motion-paused', !active);
+  if (motionToggle) {
+    motionToggle.hidden = false;
+    motionToggle.disabled = motionPreference.matches;
+    motionToggle.setAttribute('aria-pressed', String(!active));
+    motionToggle.textContent = motionPreference.matches
+      ? 'Bewegung reduziert'
+      : manuallyPaused ? 'Animationen starten' : 'Animationen pausieren';
+  }
+  if (!active) {
+    document.querySelector('.hero-image-layer')?.style.removeProperty('--scene-y');
+    document.querySelectorAll('.service-drawing').forEach(drawing => {
+      drawing.style.removeProperty('--tilt-x');
+      drawing.style.removeProperty('--tilt-y');
+    });
+  }
+  setupMotion();
+}
+motionToggle?.addEventListener('click', () => {
+  manuallyPaused = !manuallyPaused;
+  syncAmbientMotion();
+});
+motionPreference.addEventListener('change', syncAmbientMotion);
+syncAmbientMotion();
+
+// Scroll transforms stay on a separate layer from the image's slow zoom.
+const heroScene = document.querySelector('.hero-image-layer');
+const heroSection = document.querySelector('.hero');
+const desktopPointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+let sceneFramePending = false;
+function updateScene() {
+  sceneFramePending = false;
+  if (!heroScene || !heroSection || !motionIsActive()) return;
+  const rect = heroSection.getBoundingClientRect();
+  if (rect.bottom <= 0 || rect.top >= window.innerHeight) return;
+  const strength = desktopPointer.matches ? 0.13 : 0.05;
+  const shift = Math.max(-40, Math.min(65, -rect.top * strength));
+  heroScene.style.setProperty('--scene-y', `${shift.toFixed(2)}px`);
+}
+window.addEventListener('scroll', () => {
+  if (!sceneFramePending && motionIsActive()) {
+    sceneFramePending = true;
+    window.requestAnimationFrame(updateScene);
+  }
+}, { passive: true });
+window.addEventListener('resize', updateScene);
+updateScene();
+
+// Only the decorative diagram responds to a mouse; reading and links stay still.
+document.querySelectorAll('.service-grid .service').forEach(card => {
+  const drawing = card.querySelector('.service-drawing');
+  card.querySelectorAll('.service-drawing path').forEach(path => path.setAttribute('pathLength', '1'));
+  card.addEventListener('pointermove', event => {
+    if (!motionIsActive() || !desktopPointer.matches || event.pointerType !== 'mouse') return;
+    const rect = card.getBoundingClientRect();
+    drawing.style.setProperty('--tilt-y', `${((event.clientX - rect.left) / rect.width - 0.5) * 14}deg`);
+    drawing.style.setProperty('--tilt-x', `${(0.5 - (event.clientY - rect.top) / rect.height) * 10}deg`);
+  });
+  card.addEventListener('pointerleave', () => {
+    drawing.style.setProperty('--tilt-x', '0deg');
+    drawing.style.setProperty('--tilt-y', '0deg');
+  });
+});
