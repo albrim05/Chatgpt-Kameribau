@@ -1,4 +1,4 @@
-document.getElementById('inquiry').addEventListener('submit', (event) => {
+document.getElementById('inquiry')?.addEventListener('submit', (event) => {
   event.preventDefault();
   const data = new FormData(event.currentTarget);
   const subject = `Projektanfrage: ${data.get('service')} in ${data.get('place')}`;
@@ -55,3 +55,53 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 window.addEventListener('resize', updateProgress);
 updateProgress();
+
+
+// Accessible mobile navigation; anchors remain usable without JavaScript.
+const menuButton = document.querySelector('.menu-toggle');
+const mainNav = document.getElementById('main-nav');
+if (menuButton && mainNav) {
+  menuButton.hidden = false;
+  document.documentElement.classList.add('navigation-ready');
+  function closeMenu(restoreFocus = false) {
+    menuButton.setAttribute('aria-expanded', 'false');
+    mainNav.classList.remove('is-open');
+    if (restoreFocus) menuButton.focus();
+  }
+  menuButton.addEventListener('click', () => {
+    const open = menuButton.getAttribute('aria-expanded') !== 'true';
+    menuButton.setAttribute('aria-expanded', String(open));
+    mainNav.classList.toggle('is-open', open);
+  });
+  mainNav.addEventListener('click', event => {
+    if (event.target.closest('a')) closeMenu();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') closeMenu(true);
+  });
+  document.addEventListener('click', event => {
+    if (!event.target.closest('.header')) closeMenu();
+  });
+  window.matchMedia('(max-width: 700px)').addEventListener('change', () => closeMenu());
+}
+
+const header = document.querySelector('.header');
+const headerObserver = new IntersectionObserver(entries => {
+  header?.classList.toggle('is-scrolled', !entries[0].isIntersecting);
+});
+const headerSentinel = document.createElement('div');
+headerSentinel.className = 'header-sentinel';
+headerSentinel.setAttribute('aria-hidden', 'true');
+header?.before(headerSentinel);
+headerObserver.observe(headerSentinel);
+
+const sections = [...document.querySelectorAll('section[id]')];
+const sectionObserver = new IntersectionObserver(entries => {
+  const visible = entries.filter(entry => entry.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+  if (!visible) return;
+  document.querySelectorAll('#main-nav a').forEach(link => {
+    if (link.getAttribute('href') === `#${visible.target.id}`) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
+  });
+}, { rootMargin: '-120px 0px -35% 0px', threshold: [0, 0.2, 0.5] });
+sections.forEach(section => sectionObserver.observe(section));

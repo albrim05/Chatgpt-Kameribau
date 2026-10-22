@@ -1,0 +1,104 @@
+
+. Die Grundlage: Was soll die Website zeigen?
+- [ ] Klar festlegen, welche Leistungen du anbietest.
+- [ ] Festlegen, welche Kunden du ansprechen möchtest: Privatkunden, Firmen oder beide.
+- [ ] Dein tatsächliches Einsatzgebiet bestimmen.
+- [ ] Konkrete Stärken nennen, die du belegen kannst.
+- [ ] Eine passende, leicht merkbare Internetadresse wählen.
+- [ ] Eine geschäftliche E-Mail-Adresse einrichten, zum Beispiel info@firmenname.de.
+- [ ] Festlegen, wer Anfragen beantwortet und die Website aktuell hält.
+. Die Startseite: Sofort verständlich
+- [ ] Firmenname und Logo gut sichtbar zeigen.
+- [ ] Direkt sagen: Was macht ihr und wo arbeitet ihr?
+- [ ] Eine klare Überschrift verwenden, etwa „Ihr Malerbetrieb in Köln“.
+- [ ] Ein echtes, hochwertiges Foto vom Betrieb, Team oder einer eigenen Arbeit zeigen.
+- [ ] Die wichtigsten Leistungen kurz vorstellen.
+- [ ] Einen deutlich sichtbaren Knopf wie „Angebot anfragen“ einbauen.
+- [ ] Telefonnummer und Kontaktmöglichkeit leicht auffindbar machen.
+- [ ] Einen kurzen Einblick in Projekte, Team und Kundenstimmen geben.
+. Leistungen: Genau erklären, was Kunden bekommen
+- [ ] Eine übersichtliche Leistungsübersicht erstellen.
+- [ ] Für wichtige, unterschiedliche Leistungen eigene Unterseiten anlegen.
+- [ ] Jede Leistung in einfachen Worten erklären.
+- [ ] Beschreiben, für welche Probleme oder Wünsche sie geeignet ist.
+- [ ] Erklären, welche Arbeiten enthalten sind und welche zusätzlich beauftragt werden müssen.
+- [ ] Passende Bilder eigener Arbeiten ergänzen.
+- [ ] Materialien und Verfahren erklären, soweit sie für Kunden wichtig sind.
+- [ ] Auf jeder Leistungsseite eine passende Kontaktmöglichkeit anbieten.
+Gut lesbare, hilfreiche und eigenständige Inhalte entsprechen auch Googles Empfehlungen für Websites. developers.google.com
+
+. Vertrauen: Den echten Betrieb zeigen
+- [ ] Eine „Über uns“-Seite einbauen.
+- [ ] Inhaber und wichtige Ansprechpartner vorstellen.
+- [ ] Echte Teamfotos verwenden.
+- [ ] Qualifikationen und Meistertitel korrekt nennen.
+- [ ] Erfahrung mit konkreten, überprüfbaren Angaben beschreiben.
+- [ ] Zertifikate, Mitgliedschaften und Partner nur nennen, wenn sie tatsächlich bestehen.
+- [ ] Konkrete Arbeitsweisen erklären, beispielsweise Baustellenschutz oder Endreinigung.
+- [ ] Ausschließlich belegbare Aussagen und echte Kundenstimmen veröffentlichen.
+. Referenzen: Eigene Arbeit nachvollziehbar zeigen
+- [ ] Eine Auswahl abgeschlossener Projekte veröffentlichen.
+- [ ] Zu jedem Projekt erklären: Was war die Aufgabe?
+- [ ] Zeigen: Was habt ihr umgesetzt?
+- [ ] Das Ergebnis mit aussagekräftigen Fotos darstellen.
+- [ ] Vorher-Nachher-Bilder ergänzen, wenn sie sinnvoll sind.
+- [ ] Unterschiedliche Leistungen anhand passender Projekte zeigen.
+- [ ] Vor der Veröffentlichung Bildrechte und Freigaben klären.
+- [ ] Kundenadressen, Kennzeichen und andere persönliche Details auf Fotos prüfen.
+. Kontakt: Die Anfrage einfach machen
+- [ ] Eine leicht auffindbare Kontaktseite anbieten.
+- [ ] Telefonnummer auf dem Handy antippbar machen.
+- [ ] E-Mail-Adresse anklickbar machen.
+- [ ] Geschäftsadresse und tatsächliche Erreichbarkeitszeiten nennen.
+- [ ] Das Einsatzgebiet verständlich beschreiben.
+- [ ] Ein kurzes Anfrageformular anbieten.
+- [ ] Nur Daten abfragen, die für die Anfrage gebraucht werden.
+- [ ] Pflichtfelder deutlich kennzeichnen.
+- [ ] Nach dem Absenden eine verständliche Bestätigung anzeigen.
+- [ ] Eine Rückmeldezeit nur versprechen, wenn ihr sie zuverlässig einhalten könnt.
+. Anfrage und Auftragsablauf: Erwartungen klären
+- [ ] Erklären, wie es nach der Kontaktaufnahme weitergeht.
+- [ ] Beschreiben, ob zuerst telefoniert oder ein Besichtigungstermin vereinbart wird.
+- [ ] Klar sagen, ob Besichtigung, Beratung oder Angebot kostenpflichtig sind.
+- [ ] Erklären, welche Informationen für ein Angebot benötigt werden.
+- [ ] Bei Bedarf einen sicheren Upload für Fotos oder Pläne anbieten.
+- [ ] Preisbeispiele mit Leistungsumfang und Bedingungen verständlich erklären.
+- [ ] Anfahrtskosten und mögliche Zuschläge transparent behandeln.
+- [ ] Notdienst nur bewerben, wenn er tatsächlich angeboten wird; Zeiten und Konditionen nennen.
+. Gestaltung: Einheitlich und gut lesbar
+- [ ] Logo, Farben und Schriften einheitlich verwenden.
+- [ ] Gut lesbare Schriftgrößen wählen.
+- [ ] Kurze Absätze und verständliche Zwischenüberschriften verwenden.
+- [ ] Genügend Abstand zwischen Texten, Bildern und Knöpfen lassen.
+- [ ] Knöpfe klar beschriften, etwa „Rückruf anfragen“.
+- [ ] Ein einfaches Menü mit verständlichen Begriffen verwenden.
+- [ ] Störende Pop-ups und automatisch startende Videos vermeiden.
+- [ ] Rechtschreibung und alle Firmenangaben sorgfältig prüfen.
+
+
+
+. Grunddesign und Layout
+- [ ] Einheitlicher Look: gleiche Farben, Schriften und Formen auf allen Seiten.
+- [ ] Whitespace: großzügige Abstände zwischen den Elementen.
+- [ ] Visuelle Hierarchie: Hauptüberschrift, Erklärung und Kontaktbutton deutlich unterscheiden.
+- [ ] Große Typografie: auffällige, gut lesbare Überschriften.
+- [ ] Akzentfarbe: eine gezielt eingesetzte Farbe für wichtige Buttons und Details.
+- [ ] Kartenlayout: Leistungen und Projekte in übersichtlichen Kacheln darstellen.
+- [ ] Dezente Schatten und Rahmen: Karten optisch voneinander abheben.
+- [ ] Abwechslungsreiche Abschnitte: beispielsweise helle Flächen, dunkle Bereiche und große Bilder kombinieren.
+2. Der erste Bildschirm – „Hero Section“
+- [ ] Großes, hochwertiges Bild einer eigenen Arbeit.
+- [ ] Kurze, markante Überschrift.
+- [ ] Knapp erklären, welche Leistung ihr in welcher Region anbietet.
+- [ ] Deutlich sichtbarer Hauptbutton: „Projekt anfragen“.
+- [ ] Zweiter, zurückhaltender Link: „Unsere Arbeiten“.
+- [ ] Kleine Vertrauenszeile mit belegbaren Angaben.
+- [ ] Entrance Animation: Überschrift, Bild und Button beim Öffnen dezent einblenden.
+3. Navigation und Kopfbereich
+- [ ] Sticky Header: Menü bleibt beim Scrollen erreichbar.
+- [ ] Header Transition: Kopfbereich erhält beim Scrollen einen Hintergrund oder wird kompakter.
+- [ ] Hover Underline: dezente Linie unter dem Menüpunkt bei Mausberührung.
+- [ ] Aktuelle Seite im Menü sichtbar markieren.
+- [ ] Kontaktbutton im Kopfbereich hervorheben.
+- [ ] Mobile Menu Animation: Handymenü weich öffnen und schließen.
+- [ ] Menü und Kontaktbutton dürfen auf kleinen Bildschirmen keine Inhalte verdecken.
